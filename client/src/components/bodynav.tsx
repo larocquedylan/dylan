@@ -1,13 +1,29 @@
-import React, { useState } from 'react';
+import React, { useCallback, useState } from 'react';
+import BodyNavItem from './BodyNavItem';
 
 interface BodyNavProps {}
 
 const BodyNav: React.FC<BodyNavProps> = ({}) => {
   const [activeStatus, setActiveStatus] = useState(1);
+
+  const handleItemClick = useCallback(
+    (index: number) => {
+      setActiveStatus(index);
+    },
+    [setActiveStatus]
+  );
+
+  const navItems: any = [
+    { label: 'Education', index: 1 },
+    { label: 'AcroBuzz', index: 2 },
+    { label: 'BeatsforBeats', index: 3 },
+    { label: 'Free game', index: 4 },
+  ];
+
   return (
-    <div className='max-w-custom mx-auto '>
-      <div className='sm:hidden relative mx-auto rounded sm:px-4'>
-        <div className='absolute inset-0 m-auto mr-4 z-0 w-6 h-6 '>
+    <div className='mx-auto max-w-custom '>
+      <div className='relative mx-auto rounded sm:hidden sm:px-4'>
+        <div className='absolute inset-0 z-0 w-6 h-6 m-auto mr-4 '>
           <svg
             xmlns='http://www.w3.org/2000/svg'
             className='icon icon-tabler icon-tabler-selector'
@@ -27,7 +43,7 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
         </div>
         <select
           aria-label='Selected tab'
-          className='form-select block w-full p-4  rounded text-custom5 appearance-none bg-transparent relative z-10  bg-custom1'
+          className='relative z-10 block w-full p-4 bg-transparent rounded appearance-none form-select text-custom5 bg-custom1'
         >
           <option className='text-sm text-custom5'>Writing </option>
           <option className='text-sm text-custom5'>Builds </option>
@@ -38,61 +54,18 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
           <option className='text-sm text-custom5'>abc </option>
         </select>
       </div>
-      <div className='justify-between flex-wrap hidden sm:block bg-custom1 rounded shadow'>
-        <div className='xl:w-full xl:mx-0 h-12'>
-          <ul className='flex xs:px-0 px-4'>
-            <li
-              onClick={() => setActiveStatus(1)}
-              className={
-                activeStatus == 1
-                  ? 'text-sm text-custom5 flex flex-col justify-between border-custom5 pt-3 rounded-t mr-10 font-normal transition-colors duration-300'
-                  : 'text-sm  text-custom4 py-3 mr-10 font-normal cursor-pointer hover:text-custom3 transition-colors duration-300'
-              }
-            >
-              <span className='mb-3 cursor-pointer'>Education</span>
-              {activeStatus == 1 && (
-                <div className='w-full h-1 bg-custom5 hover:bg-custom3 rounded-t-md transition-colors duration-300' />
-              )}
-            </li>
-            <li
-              onClick={() => setActiveStatus(2)}
-              className={
-                activeStatus == 2
-                  ? 'text-sm text-custom5 flex flex-col justify-between border-custom5 pt-3 rounded-t mr-10 font-normal transition-colors duration-300'
-                  : 'text-sm  text-custom4 py-3 mr-10 font-normal cursor-pointer hover:text-custom3 transition-colors duration-300'
-              }
-            >
-              <span className='mb-3 cursor-pointer'>AcroBuzz</span>
-              {activeStatus == 2 && (
-                <div className='w-full h-1 bg-custom5  hover:bg-custom3 rounded-t-md transition-colors duration-300' />
-              )}
-            </li>
-            <li
-              onClick={() => setActiveStatus(3)}
-              className={
-                activeStatus == 3
-                  ? 'text-sm text-custom5 flex flex-col justify-between border-custom5 pt-3 rounded-t mr-10 font-normal transition-colors duration-300'
-                  : 'text-sm  text-custom4 py-3 mr-10 font-normal cursor-pointer hover:text-custom3 transition-colors duration-300'
-              }
-            >
-              <span className='mb-3 cursor-pointer'>BeatsforBeats</span>
-              {activeStatus == 3 && (
-                <div className='w-full h-1 bg-custom5  hover:bg-custom3 rounded-t-md transition-colors duration-300' />
-              )}
-            </li>
-            <li
-              onClick={() => setActiveStatus(4)}
-              className={
-                activeStatus == 4
-                  ? 'text-sm text-custom5 flex flex-col justify-between border-custom5 pt-3 rounded-t mr-10 font-normal transition-colors duration-300'
-                  : 'text-sm  text-custom4 py-3 mr-10 font-normal cursor-pointer hover:text-custom3 transition-colors duration-300'
-              }
-            >
-              <span className='mb-3 cursor-pointer'>Free game</span>
-              {activeStatus == 4 && (
-                <div className='w-full h-1 bg-custom5  hover:bg-custom3 rounded-t-md transition-colors duration-300' />
-              )}
-            </li>
+      <div className='flex-wrap justify-between hidden rounded shadow sm:block bg-custom1'>
+        <div className='h-12 xl:w-full xl:mx-0'>
+          <ul className='flex px-4 xs:px-0'>
+            {navItems.map((item: any) => (
+              <BodyNavItem
+                key={item.index}
+                label={item.label}
+                index={item.index}
+                activeStatus={activeStatus}
+                setActiveStatus={handleItemClick}
+              />
+            ))}
           </ul>
         </div>
       </div>
