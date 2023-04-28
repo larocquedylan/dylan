@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "program": "Project Description",
+    "dates": "April 2023",
+    "description": "AcroBuzz, in essence, is a web application that functions as a microblogging platform, similar to that of Reddit or Twitter, but it doesn't support comments. The primary objective behind creating this application was to showcase my ability to learn, integrate, and implement new tools and libraries within a short span of time – just three weeks. The tools used were specifically requested in the job description I was applying for, and I had minimal experience with them. <br /><br />At its core, AcroBuzz implements user authentication through cookies in session storage, which in turn, authorizes users to create and edit posts, as well as upvote or downvote others' contributions. The app proved to be a valuable exercise in refining my debugging skills and instilling confidence in my ability to adapt to new libraries.<br /><br />One of the main challenges I faced was managing package version dependencies and finding solutions to the issues that arose. A lot of time spent looking into documentation, and much more in GitHub issues to tackle the core problems and create a solution that worked well with my project. <br /><br />The current version, v1, has received feedback from a person at the company I am applying for, and I'm excited about incorporating their suggestions into future iterations. One idea is to enable users to upload images from their local machines or directly via URLs. This inspired another thought about integrating my other app, BeatsforBits, into AcroBuzz. This could potentially allow users to upload their own music, with upvotes and downvotes being linked to a user's Lightning wallet. In this scenario, upvoting a post could trigger a microtransaction sent to the author's wallet, akin to StackerNews."
+  },
+  {
+    "id": "2",
+    "program": "Tech Stack",
+    "dates": "",
+    "description": "Client: <br /><br /> TypeScript, React, Next.js, ChakraUi, Apollo Client/Urql, GraphQl, GraphQl Codegen, Formik <br /><br /> Server: <br /><br /> TypeScript, Node.js, TSnode, Apollo Server 4, Express, Prisma/MikroORM, PostgreSQL, TypeGraphQL, GraphQl, Reflect Metadata, Argon2<br /><br /> Devops: <br /><br /> Docker, Dokku VPS, Dokku Letsencrypt"
+  },
+  {
+    "id": "3",
+    "program": "Links",
+    "dates": "",
+    "description": "https://github.com/larocquedylan/AcroBuzz-Server <br /><br />https://github.com/larocquedylan/AcroBuzz-Client <br /><br />https://acrobuzz.larocque.xyz"
+  }
+]
