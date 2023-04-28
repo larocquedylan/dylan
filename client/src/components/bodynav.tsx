@@ -1,12 +1,14 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import BodyNavItem from './BodyNavItem';
 import Education from './Education';
+import AcroBuzz from './AcroBuzz';
 
 interface BodyNavProps {}
 
 const BodyNav: React.FC<BodyNavProps> = ({}) => {
   const [activeStatus, setActiveStatus] = useState(1);
   const [educationData, setEducationData] = useState([]);
+  const [acrobuzzData, setAcrobuzzData] = useState([]);
 
   const handleItemClick = useCallback(
     (index: number) => {
@@ -32,8 +34,19 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
     }
   };
 
+  const fetchAcroData = async () => {
+    try {
+      const response = await fetch('/acrobuzz.json');
+      const data = await response.json();
+      setAcrobuzzData(data);
+    } catch (error) {
+      console.error('Error fetching acro data:', error);
+    }
+  };
+
   useEffect(() => {
     fetchEducationData();
+    fetchAcroData();
   }, []);
 
   return (
@@ -85,7 +98,6 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
           </ul>
         </div>
 
-        {/* Add conditional rendering for the EducationTab components */}
         {activeStatus === 1 && (
           <div className='flex flex-col'>
             {educationData.map((edu) => (
@@ -98,7 +110,18 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
             ))}
           </div>
         )}
-        {/* Add more conditional rendering for other tabs here */}
+        {activeStatus === 2 && (
+          <div className='flex flex-col'>
+            {acrobuzzData.map((result) => (
+              <AcroBuzz
+                key={result.id}
+                title={result.program}
+                dates={result.dates}
+                description={result.description}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
