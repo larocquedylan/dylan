@@ -5,7 +5,7 @@ import NavBar from './components/navbar';
 
 function App() {
   return (
-    <div className='bg-custom1'>
+    <div className='bg-custom1 mb-4'>
       <NavBar />
       <Bio />
       <BodyNav />
