@@ -9,7 +9,7 @@
     "id": "2",
     "program": "Tech Stack",
     "dates": "",
-    "description": "Client: <br /><br /> TypeScript, React, Next.js, ChakraUi, Apollo Client/Urql, GraphQl, GraphQl Codegen, Formik <br /><br /> Server: <br /><br /> TypeScript, Node.js, TSnode, Apollo Server 4, Express, Prisma/MikroORM, PostgreSQL, TypeGraphQL, GraphQl, Reflect Metadata, Argon2<br /><br /> Devops: <br /><br /> Docker, Dokku VPS, Dokku Letsencrypt"
+    "description": "Frontend <br />TypeScript, React, Next.js, ChakraUi, Apollo Client/Urql, GraphQl, GraphQl Codegen, Formik <br /><br /> Backend <br />TypeScript, Node.js, TSnode, Apollo Server 4, Express, Prisma/MikroORM, PostgreSQL, TypeGraphQL, GraphQl, Reflect Metadata, Argon2<br /><br /> DevOps<br />Docker, Dokku VPS, Dokku Letsencrypt"
   },
   {
     "id": "3",
