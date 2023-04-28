@@ -1,10 +1,12 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import BodyNavItem from './BodyNavItem';
+import Education from './Education';
 
 interface BodyNavProps {}
 
 const BodyNav: React.FC<BodyNavProps> = ({}) => {
   const [activeStatus, setActiveStatus] = useState(1);
+  const [educationData, setEducationData] = useState([]);
 
   const handleItemClick = useCallback(
     (index: number) => {
@@ -19,6 +21,20 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
     { label: 'BeatsforBeats', index: 3 },
     { label: 'Free game', index: 4 },
   ];
+
+  const fetchEducationData = async () => {
+    try {
+      const response = await fetch('/education.json');
+      const data = await response.json();
+      setEducationData(data);
+    } catch (error) {
+      console.error('Error fetching education data:', error);
+    }
+  };
+
+  useEffect(() => {
+    fetchEducationData();
+  }, []);
 
   return (
     <div className='mx-auto max-w-custom '>
@@ -68,6 +84,21 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
             ))}
           </ul>
         </div>
+
+        {/* Add conditional rendering for the EducationTab components */}
+        {activeStatus === 1 && (
+          <div className='flex flex-col'>
+            {educationData.map((edu) => (
+              <Education
+                key={edu.id}
+                title={edu.program}
+                dates={edu.dates}
+                description={edu.description}
+              />
+            ))}
+          </div>
+        )}
+        {/* Add more conditional rendering for other tabs here */}
       </div>
     </div>
   );
