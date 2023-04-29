@@ -45,4 +45,4 @@ const Education: React.FC<EducationProps> = ({
   );
 };
 
-export default Education;
+export default React.memo(Education);

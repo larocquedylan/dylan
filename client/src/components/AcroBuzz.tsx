@@ -52,4 +52,4 @@ const AcroBuzz: React.FC<AcroBuzzProps> = ({
   );
 };
 
-export default AcroBuzz;
+export default React.memo(AcroBuzz);
