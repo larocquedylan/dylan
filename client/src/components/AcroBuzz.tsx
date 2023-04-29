@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import convertUrlsToAnchors from '../utils/convertUrqlToAnchor';
 
 interface AcroBuzzProps {
   key: string;
@@ -26,15 +27,6 @@ const AcroBuzz: React.FC<AcroBuzzProps> = ({
     'https://github.com/larocquedylan/AcroBuzz-Server': 'Server repo',
     'https://github.com/larocquedylan/AcroBuzz-Client': 'Client repo',
     'https://acrobuzz.larocque.xyz': 'AcroBuzz',
-  };
-
-  const convertUrlsToAnchors = (text: string) => {
-    const urlRegex =
-      /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
-    return text.replace(urlRegex, (url) => {
-      const alias = urlAliases[url] || url;
-      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold">${alias}</a>`;
-    });
   };
 
   const boldKeywords = (text: string) => {
@@ -77,7 +69,10 @@ const AcroBuzz: React.FC<AcroBuzzProps> = ({
         >
           <p className='mb-4 text-sm'> {dates}</p>
           {paragraphs.map((paragraph, index) => {
-            const htmlContent = convertUrlsToAnchors(boldKeywords(paragraph));
+            const htmlContent = convertUrlsToAnchors(
+              boldKeywords(paragraph),
+              urlAliases
+            );
             return (
               <p
                 key={index}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import convertUrlsToAnchors from '../utils/convertUrqlToAnchor';
 
 interface EducationProps {
   key: string;
@@ -34,16 +35,6 @@ const Education: React.FC<EducationProps> = ({
     'https://github.com/larocquedylan/beats-for-bits-api': 'Beats for Bits',
   };
 
-  // convert links to anchor tags
-  const convertUrlsToAnchors = (text: string) => {
-    const urlRegex =
-      /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
-    return text.replace(urlRegex, (url) => {
-      const alias = urlAliases[url] || url;
-      return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold">${alias}</a>`;
-    });
-  };
-
   return (
     <div className='flex flex-col'>
       <div className='flex items-center justify-between p-4 pr-0 bg-custom1'>
@@ -75,7 +66,7 @@ const Education: React.FC<EducationProps> = ({
         >
           <p className='mb-4 text-sm'> {dates}</p>
           {paragraphs.map((paragraph, index) => {
-            const htmlContent = convertUrlsToAnchors(paragraph);
+            const htmlContent = convertUrlsToAnchors(paragraph, urlAliases);
             return (
               <p
                 key={index}
