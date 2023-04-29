@@ -5,10 +5,17 @@ import AcroBuzz from './AcroBuzz';
 
 interface BodyNavProps {}
 
-const BodyNav: React.FC<BodyNavProps> = ({}) => {
+interface DataItem {
+  id: number;
+  program: string;
+  dates: string;
+  description: string;
+}
+
+const BodyNav: React.FC<BodyNavProps> = () => {
   const [activeStatus, setActiveStatus] = useState(1);
-  const [educationData, setEducationData] = useState([]);
-  const [acrobuzzData, setAcrobuzzData] = useState([]);
+  const [educationData, setEducationData] = useState<DataItem[]>([]);
+  const [acrobuzzData, setAcrobuzzData] = useState<DataItem[]>([]);
 
   const handleItemClick = useCallback(
     (index: number) => {
@@ -24,29 +31,22 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
     { label: 'Free game', index: 4 },
   ];
 
-  const fetchEducationData = async () => {
+  const fetchData = async (
+    url: string,
+    setData: React.Dispatch<React.SetStateAction<DataItem[]>>
+  ) => {
     try {
-      const response = await fetch('/education.json');
+      const response = await fetch(url);
       const data = await response.json();
-      setEducationData(data);
+      setData(data);
     } catch (error) {
-      console.error('Error fetching education data:', error);
-    }
-  };
-
-  const fetchAcroData = async () => {
-    try {
-      const response = await fetch('/acrobuzz.json');
-      const data = await response.json();
-      setAcrobuzzData(data);
-    } catch (error) {
-      console.error('Error fetching acro data:', error);
+      console.error(`Error fetching data from ${url}:`, error);
     }
   };
 
   useEffect(() => {
-    fetchEducationData();
-    fetchAcroData();
+    fetchData('/education.json', setEducationData);
+    fetchData('/acrobuzz.json', setAcrobuzzData);
   }, []);
 
   return (
@@ -102,7 +102,7 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
           <div className='flex flex-col'>
             {educationData.map((edu) => (
               <Education
-                key={edu.id}
+                key={edu.id.toString()}
                 title={edu.program}
                 dates={edu.dates}
                 description={edu.description}
@@ -114,7 +114,7 @@ const BodyNav: React.FC<BodyNavProps> = ({}) => {
           <div className='flex flex-col'>
             {acrobuzzData.map((result) => (
               <AcroBuzz
-                key={result.id}
+                key={result.id.toString()}
                 title={result.program}
                 dates={result.dates}
                 description={result.description}
