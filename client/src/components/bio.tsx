@@ -8,9 +8,13 @@ const Bio: React.FC<BioProps> = ({}) => {
     <main className='flex col-auto max-w-custom mx-auto items-center py-6 px-4'>
       <img className='rounded-2xl w-40 h-40' src={me} alt='Dylan LaRocque' />
       <div className='flex flex-col space-y-2'>
-        <p className='text-custom5 font-medium text-lg ml-10'>
+        <p className='text-custom5 font-medium text-md ml-10'>
           {' '}
-          Yo, I'm Dylan.{' '}
+          Yo, I'm Dylan, a full-stack TypeScript pro, with a marketing flow, got
+          a degree from the UBC, I write rhymes and make beats, like long walks
+          upon the sea, HODL BTC, my guiding ethic is to feed more than I eat,
+          multiply more than I divide, and give thanks for every smile and every
+          cry.
         </p>
         <p className='text-custom5 font-medium text-lg'></p>
       </div>
