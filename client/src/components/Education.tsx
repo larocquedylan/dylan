@@ -10,12 +10,7 @@ interface EducationProps {
   dates: string;
 }
 
-const Education: React.FC<EducationProps> = ({
-  key,
-  title,
-  dates,
-  description,
-}) => {
+const Education: React.FC<EducationProps> = ({ title, dates, description }) => {
   const paragraphs = paragraphBreak(description);
 
   const urlAliases = {
