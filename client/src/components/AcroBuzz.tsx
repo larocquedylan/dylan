@@ -10,12 +10,7 @@ interface AcroBuzzProps {
   dates: string;
 }
 
-const AcroBuzz: React.FC<AcroBuzzProps> = ({
-  key,
-  title,
-  dates,
-  description,
-}) => {
+const AcroBuzz: React.FC<AcroBuzzProps> = ({ title, dates, description }) => {
   const paragraphs = paragraphBreak(description);
 
   const urlAliases = {
