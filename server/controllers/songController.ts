@@ -32,17 +32,26 @@ export const getSongById = async (req: Request, res: Response) => {
 
 // Download Song Controller
 export const downloadSong = async (req: Request, res: Response) => {
-  const songId = req.params.songId;
+  const songTitle = req.params.songTitle;
+  console.log(songTitle);
   const songList = await getSongs();
+  const lastElement = songList[songList.length - 1];
+  console.log(lastElement);
 
-  const song = songList.find((song: Song) => song.id === songId);
+  // console.log(songList);
+
+  const song = songList.find((song: Song) => song.title === songTitle);
+  console.log(song);
 
   if (!song) {
     return handleError(res, 404, 'File not found bro!');
   }
 
+  const filePath = `./public/songs/${songTitle}.wav`;
+  console.log(filePath);
+
   try {
-    res.download(`./public/songs/${songId}.wav`);
+    res.download(filePath);
   } catch (error) {
     console.error(error);
     return res.status(500).json({ error: 'Error while downloading song' });
@@ -51,16 +60,16 @@ export const downloadSong = async (req: Request, res: Response) => {
 
 // Stream Song Controller
 export const streamSong = async (req: Request, res: Response) => {
-  const songId = req.params.songId;
+  const songTitle = req.params.songTitle;
   const songList = await getSongs();
 
-  const song = songList.find((song: Song) => song.id === songId);
+  const song = songList.find((song: Song) => song.title === songTitle);
 
   if (!song) {
     return handleError(res, 404, 'File not found bro!');
   }
 
-  const filePath = `./public/songs/${songId}.wav`;
+  const filePath = `./public/songs/${songTitle}.wav`;
   const stat = fs.statSync(filePath);
   const fileSize = stat.size;
   const range = req.headers.range;

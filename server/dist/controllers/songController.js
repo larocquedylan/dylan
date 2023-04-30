@@ -37,14 +37,21 @@ const getSongById = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.getSongById = getSongById;
 // Download Song Controller
 const downloadSong = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    const songId = req.params.songId;
+    const songTitle = req.params.songTitle;
+    console.log(songTitle);
     const songList = yield getSongs();
-    const song = songList.find((song) => song.id === songId);
+    const lastElement = songList[songList.length - 1];
+    console.log(lastElement);
+    // console.log(songList);
+    const song = songList.find((song) => song.title === songTitle);
+    console.log(song);
     if (!song) {
         return handleError(res, 404, 'File not found bro!');
     }
+    const filePath = `./public/songs/${songTitle}.wav`;
+    console.log(filePath);
     try {
-        res.download(`../public/songs/${songId}.wav`);
+        res.download(filePath);
     }
     catch (error) {
         console.error(error);
@@ -54,14 +61,13 @@ const downloadSong = (req, res) => __awaiter(void 0, void 0, void 0, function* (
 exports.downloadSong = downloadSong;
 // Stream Song Controller
 const streamSong = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(req);
-    const songId = req.params.songId;
+    const songTitle = req.params.songTitle;
     const songList = yield getSongs();
-    const song = songList.find((song) => song.id === songId);
+    const song = songList.find((song) => song.title === songTitle);
     if (!song) {
         return handleError(res, 404, 'File not found bro!');
     }
-    const filePath = `./public/songs/${songId}.wav`;
+    const filePath = `./public/songs/${songTitle}.wav`;
     const stat = fs_1.default.statSync(filePath);
     const fileSize = stat.size;
     const range = req.headers.range;

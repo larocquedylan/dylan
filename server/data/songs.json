@@ -1,140 +1,140 @@
 [
   {
     "id": "1",
-    "title": "11.22 Q",
-    "song": "../public/songs/11.22q.wav",
-    "download": "http://localhost:8080/songs/download/1"
+    "title": "11.22q",
+    "song": "/public/songs/11.22q.wav",
+    "download": "http://localhost:8080/songs/download/11.22q"
   },
   {
     "id": "2",
-    "title": "9.21.22 C",
-    "song": "../public/songs/9.21.22c.wav",
-    "download": "http://localhost:8080/songs/download/2"
+    "title": "9.21.22c",
+    "song": "/public/songs/9.21.22c.wav",
+    "download": "http://localhost:8080/songs/download/9.21.22c"
   },
   {
     "id": "3",
-    "title": "9.21.22 D",
-    "song": "../public/songs/9.21.22d.wav",
-    "download": "http://localhost:8080/songs/download/3"
+    "title": "9.21.22d",
+    "song": "/public/songs/9.21.22d.wav",
+    "download": "http://localhost:8080/songs/download/9.21.22d"
   },
   {
     "id": "4",
     "title": "11.6.22",
-    "song": "../public/songs/11.6.22.wav",
-    "download": "http://localhost:8080/songs/download/4"
+    "song": "/public/songs/11.6.22.wav",
+    "download": "http://localhost:8080/songs/download/11.6.22"
   },
   {
     "id": "5",
     "title": "11.9.22",
-    "song": "../public/songs/11.9.22.wav",
-    "download": "http://localhost:8080/songs/download/5"
+    "song": "/public/songs/11.9.22.wav",
+    "download": "http://localhost:8080/songs/download/11.9.22"
   },
   {
     "id": "6",
-    "title": "5.21.21 G",
-    "song": "../public/songs/5.21.21g.wav",
-    "download": "http://localhost:8080/songs/download/6"
+    "title": "5.21.21g",
+    "song": "/public/songs/5.21.21g.wav",
+    "download": "http://localhost:8080/songs/download/5.21.21g"
   },
   {
     "id": "7",
     "title": "6.11.22",
-    "song": "../public/songs/6.11.22.wav",
-    "download": "http://localhost:8080/songs/download/7"
+    "song": "/public/songs/6.11.22.wav",
+    "download": "http://localhost:8080/songs/download/6.11.22"
   },
   {
     "id": "8",
     "title": "6.14.22",
-    "song": "../public/songs/6.14.22.wav",
-    "download": "http://localhost:8080/songs/download/8"
+    "song": "/public/songs/6.14.22.wav",
+    "download": "http://localhost:8080/songs/download/6.14.22"
   },
   {
     "id": "9",
     "title": "6.27.22",
-    "song": "../public/songs/6.27.22.wav",
-    "download": "http://localhost:8080/songs/download/9"
+    "song": "/public/songs/6.27.22.wav",
+    "download": "http://localhost:8080/songs/download/6.27.22"
   },
   {
     "id": "10",
-    "title": "7.7.22 C1",
-    "song": "../public/songs/7.7.22c1.wav",
-    "download": "http://localhost:8080/songs/download/10"
+    "title": "7.7.22c1",
+    "song": "/public/songs/7.7.22c1.wav",
+    "download": "http://localhost:8080/songs/download/7.7.22c1"
   },
   {
     "id": "11",
     "title": "7.19.22",
-    "song": "../public/songs/7.1922.wav",
-    "download": "http://localhost:8080/songs/download/11"
+    "song": "/public/songs/7.19.22.wav",
+    "download": "http://localhost:8080/songs/download/7.19.22"
   },
   {
     "id": "12",
-    "title": "8.10.22 J",
-    "song": "../public/songs/8.10.22j.wav",
-    "download": "http://localhost:8080/songs/download/12"
+    "title": "8.10.22j",
+    "song": "/public/songs/8.10.22j.wav",
+    "download": "http://localhost:8080/songs/download/8.10.22j"
   },
   {
     "id": "13",
-    "title": "8.22.22 E",
-    "song": "../public/songs/8.22.22e.wav",
-    "download": "http://localhost:8080/songs/download/13"
+    "title": "8.22.22e",
+    "song": "/public/songs/8.22.22e.wav",
+    "download": "http://localhost:8080/songs/download/8.22.22e"
   },
   {
     "id": "14",
     "title": "8.28.22",
-    "song": "../public/songs/8.28.22.wav",
-    "download": "http://localhost:8080/songs/download/14"
+    "song": "/public/songs/8.28.22.wav",
+    "download": "http://localhost:8080/songs/download/8.28.22"
   },
   {
     "id": "15",
     "title": "2.18.23",
-    "song": "../public/songs/2.18.23.wav",
-    "download": "http://localhost:8080/songs/download/15"
+    "song": "/public/songs/2.18.23.wav",
+    "download": "http://localhost:8080/songs/download/2.18.23"
   },
   {
     "id": "16",
     "title": "2.20.23",
-    "song": "../public/songs/2.20.23.wav",
-    "download": "http://localhost:8080/songs/download/16"
+    "song": "/public/songs/2.20.23.wav",
+    "download": "http://localhost:8080/songs/download/2.20.23"
   },
   {
     "id": "17",
-    "title": "3.8.22 J1",
-    "song": "../public/songs/3.8.22j1.wav",
-    "download": "http://localhost:8080/songs/download/17"
+    "title": "3.8.22j1",
+    "song": "/public/songs/3.8.22j1.wav",
+    "download": "http://localhost:8080/songs/download/3.8.22j1"
   },
   {
     "id": "18",
     "title": "3.15.23",
-    "song": "../public/songs/3.15.23.wav",
-    "download": "http://localhost:8080/songs/download/18"
+    "song": "/public/songs/3.15.23.wav",
+    "download": "http://localhost:8080/songs/download/3.15.23"
   },
   {
     "id": "19",
-    "title": "4.20.22 K",
-    "song": "../public/songs/4.20.22k.wav",
-    "download": "http://localhost:8080/songs/download/19"
+    "title": "4.20.22k",
+    "song": "/public/songs/4.20.22k.wav",
+    "download": "http://localhost:8080/songs/download/4.20.22k"
   },
   {
     "id": "20",
-    "title": "4.22.22 O",
-    "song": "../public/songs/4.22.22o.wav",
-    "download": "http://localhost:8080/songs/download/20"
+    "title": "4.22.22o",
+    "song": "/public/songs/4.22.22o.wav",
+    "download": "http://localhost:8080/songs/download/4.22.22o"
   },
   {
     "id": "21",
-    "title": "1.22 S1",
-    "song": "../public/songs/1.22s1.wav",
-    "download": "http://localhost:8080/songs/download/21"
+    "title": "1.22s1",
+    "song": "/public/songs/1.22s1.wav",
+    "download": "http://localhost:8080/songs/download/1.22s1"
   },
   {
     "id": "22",
     "title": "2.7.23",
-    "song": "../public/songs/2.7.23.wav",
-    "download": "http://localhost:8080/songs/download/22"
+    "song": "/public/songs/2.7.23.wav",
+    "download": "http://localhost:8080/songs/download/2.7.231"
   },
   {
     "id": "23",
-    "title": "1.22 G b",
-    "song": "../public/songs/1.22gb.wav",
-    "download": "http://localhost:8080/songs/download/23"
+    "title": "1.22gb",
+    "song": "/public/songs/1.22gb.wav",
+    "download": "http://localhost:8080/songs/download/1.22gb"
   }
 ]

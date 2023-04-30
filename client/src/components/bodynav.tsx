@@ -134,7 +134,10 @@ const BodyNav: React.FC<BodyNavProps> = () => {
                 key={song.id.toString()}
                 id={song.id}
                 title={song.title}
-                fileURL={`http://localhost:8080/songs/stream/${song.id}`}
+                download={song.download}
+                fileURL={`http://localhost:8080/songs/stream/${encodeURIComponent(
+                  song.title
+                )}`}
               />
             ))}
           </div>
