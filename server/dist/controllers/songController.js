@@ -38,12 +38,18 @@ exports.getSongById = getSongById;
 // Download Song Controller
 const downloadSong = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const songTitle = req.params.songTitle;
+    console.log(songTitle);
     const songList = yield getSongs();
+    const lastElement = songList[songList.length - 1];
+    console.log(lastElement);
+    // console.log(songList);
     const song = songList.find((song) => song.title === songTitle);
+    console.log(song);
     if (!song) {
         return handleError(res, 404, 'File not found bro!');
     }
     const filePath = `./public/songs/${songTitle}.wav`;
+    console.log(filePath);
     try {
         res.download(filePath);
     }

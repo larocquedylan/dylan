@@ -33,15 +33,22 @@ export const getSongById = async (req: Request, res: Response) => {
 // Download Song Controller
 export const downloadSong = async (req: Request, res: Response) => {
   const songTitle = req.params.songTitle;
+  console.log(songTitle);
   const songList = await getSongs();
+  const lastElement = songList[songList.length - 1];
+  console.log(lastElement);
+
+  // console.log(songList);
 
   const song = songList.find((song: Song) => song.title === songTitle);
+  console.log(song);
 
   if (!song) {
     return handleError(res, 404, 'File not found bro!');
   }
 
   const filePath = `./public/songs/${songTitle}.wav`;
+  console.log(filePath);
 
   try {
     res.download(filePath);
