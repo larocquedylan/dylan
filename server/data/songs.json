@@ -1,140 +1,140 @@
 [
   {
     "id": "1",
-    "title": "11.22 Q",
-    "song": "../public/songs/11.22q.wav",
+    "title": "11.22Q",
+    "song": "/public/songs/11.22q.wav",
     "download": "http://localhost:8080/songs/download/1"
   },
   {
     "id": "2",
-    "title": "9.21.22 C",
-    "song": "../public/songs/9.21.22c.wav",
+    "title": "9.21.22C",
+    "song": "/public/songs/9.21.22c.wav",
     "download": "http://localhost:8080/songs/download/2"
   },
   {
     "id": "3",
-    "title": "9.21.22 D",
-    "song": "../public/songs/9.21.22d.wav",
+    "title": "9.21.22D",
+    "song": "/public/songs/9.21.22d.wav",
     "download": "http://localhost:8080/songs/download/3"
   },
   {
     "id": "4",
     "title": "11.6.22",
-    "song": "../public/songs/11.6.22.wav",
+    "song": "/public/songs/11.6.22.wav",
     "download": "http://localhost:8080/songs/download/4"
   },
   {
     "id": "5",
     "title": "11.9.22",
-    "song": "../public/songs/11.9.22.wav",
+    "song": "/public/songs/11.9.22.wav",
     "download": "http://localhost:8080/songs/download/5"
   },
   {
     "id": "6",
-    "title": "5.21.21 G",
-    "song": "../public/songs/5.21.21g.wav",
+    "title": "5.21.21G",
+    "song": "/public/songs/5.21.21g.wav",
     "download": "http://localhost:8080/songs/download/6"
   },
   {
     "id": "7",
     "title": "6.11.22",
-    "song": "../public/songs/6.11.22.wav",
+    "song": "/public/songs/6.11.22.wav",
     "download": "http://localhost:8080/songs/download/7"
   },
   {
     "id": "8",
     "title": "6.14.22",
-    "song": "../public/songs/6.14.22.wav",
+    "song": "/public/songs/6.14.22.wav",
     "download": "http://localhost:8080/songs/download/8"
   },
   {
     "id": "9",
     "title": "6.27.22",
-    "song": "../public/songs/6.27.22.wav",
+    "song": "/public/songs/6.27.22.wav",
     "download": "http://localhost:8080/songs/download/9"
   },
   {
     "id": "10",
-    "title": "7.7.22 C1",
-    "song": "../public/songs/7.7.22c1.wav",
+    "title": "7.7.22C1",
+    "song": "/public/songs/7.7.22c1.wav",
     "download": "http://localhost:8080/songs/download/10"
   },
   {
     "id": "11",
     "title": "7.19.22",
-    "song": "../public/songs/7.1922.wav",
+    "song": "/public/songs/7.19.22.wav",
     "download": "http://localhost:8080/songs/download/11"
   },
   {
     "id": "12",
-    "title": "8.10.22 J",
-    "song": "../public/songs/8.10.22j.wav",
+    "title": "8.10.22J",
+    "song": "/public/songs/8.10.22j.wav",
     "download": "http://localhost:8080/songs/download/12"
   },
   {
     "id": "13",
-    "title": "8.22.22 E",
-    "song": "../public/songs/8.22.22e.wav",
+    "title": "8.22.22E",
+    "song": "/public/songs/8.22.22e.wav",
     "download": "http://localhost:8080/songs/download/13"
   },
   {
     "id": "14",
     "title": "8.28.22",
-    "song": "../public/songs/8.28.22.wav",
+    "song": "/public/songs/8.28.22.wav",
     "download": "http://localhost:8080/songs/download/14"
   },
   {
     "id": "15",
     "title": "2.18.23",
-    "song": "../public/songs/2.18.23.wav",
+    "song": "/public/songs/2.18.23.wav",
     "download": "http://localhost:8080/songs/download/15"
   },
   {
     "id": "16",
     "title": "2.20.23",
-    "song": "../public/songs/2.20.23.wav",
+    "song": "/public/songs/2.20.23.wav",
     "download": "http://localhost:8080/songs/download/16"
   },
   {
     "id": "17",
-    "title": "3.8.22 J1",
-    "song": "../public/songs/3.8.22j1.wav",
+    "title": "3.8.22J1",
+    "song": "/public/songs/3.8.22j1.wav",
     "download": "http://localhost:8080/songs/download/17"
   },
   {
     "id": "18",
     "title": "3.15.23",
-    "song": "../public/songs/3.15.23.wav",
+    "song": "/public/songs/3.15.23.wav",
     "download": "http://localhost:8080/songs/download/18"
   },
   {
     "id": "19",
-    "title": "4.20.22 K",
-    "song": "../public/songs/4.20.22k.wav",
+    "title": "4.20.22K",
+    "song": "/public/songs/4.20.22k.wav",
     "download": "http://localhost:8080/songs/download/19"
   },
   {
     "id": "20",
-    "title": "4.22.22 O",
-    "song": "../public/songs/4.22.22o.wav",
+    "title": "4.22.22O",
+    "song": "/public/songs/4.22.22o.wav",
     "download": "http://localhost:8080/songs/download/20"
   },
   {
     "id": "21",
-    "title": "1.22 S1",
-    "song": "../public/songs/1.22s1.wav",
-    "download": "http://localhost:8080/songs/download/21"
+    "title": "1.22S1",
+    "song": "/public/songs/1.22s1.wav",
+    "download": "http://localhost:8080/songs/download/1.22s1"
   },
   {
     "id": "22",
     "title": "2.7.23",
-    "song": "../public/songs/2.7.23.wav",
-    "download": "http://localhost:8080/songs/download/22"
+    "song": "/public/songs/2.7.23.wav",
+    "download": "http://localhost:8080/songs/download/2.7.23"
   },
   {
     "id": "23",
-    "title": "1.22 G b",
-    "song": "../public/songs/1.22gb.wav",
-    "download": "http://localhost:8080/songs/download/23"
+    "title": "1.22Gb",
+    "song": "/public/songs/1.22gb.wav",
+    "download": "http://localhost:8080/songs/download/1.22gb.wav"
   }
 ]
