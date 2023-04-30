@@ -2,6 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react';
 import BodyNavItem from './BodyNavItem';
 import Education from './Education';
 import AcroBuzz from './AcroBuzz';
+import Songs from './songs';
 
 interface BodyNavProps {}
 
@@ -16,6 +17,7 @@ const BodyNav: React.FC<BodyNavProps> = () => {
   const [activeStatus, setActiveStatus] = useState(1);
   const [educationData, setEducationData] = useState<DataItem[]>([]);
   const [acrobuzzData, setAcrobuzzData] = useState<DataItem[]>([]);
+  const [songsData, setSongsData] = useState<DataItem[]>([]);
 
   const handleItemClick = useCallback(
     (index: number) => {
@@ -47,7 +49,10 @@ const BodyNav: React.FC<BodyNavProps> = () => {
   useEffect(() => {
     fetchData('/education.json', setEducationData);
     fetchData('/acrobuzz.json', setAcrobuzzData);
+    fetchData('http://localhost:8080/songs', setSongsData);
   }, []);
+
+  console.log('songdata', songsData);
 
   return (
     <div className='mx-auto max-w-custom '>
@@ -74,13 +79,13 @@ const BodyNav: React.FC<BodyNavProps> = () => {
           aria-label='Selected tab'
           className='relative z-10 block w-full p-4 bg-transparent rounded appearance-none form-select text-custom5 bg-custom1'
         >
-          <option className='text-sm text-custom5'>Writing </option>
-          <option className='text-sm text-custom5'>Builds </option>
+          <option className='text-sm text-custom5'>Education </option>
+          <option className='text-sm text-custom5'>AcroBuzz </option>
           <option selected className='text-sm text-custom5'>
-            Writing{' '}
+            Songs
           </option>
-          <option className='text-sm text-custom5'>xyz </option>
-          <option className='text-sm text-custom5'>abc </option>
+          {/* <option className='text-sm text-custom5'>xyz </option>
+          <option className='text-sm text-custom5'>abc </option> */}
         </select>
       </div>
       <div className='flex-wrap justify-between hidden rounded shadow sm:block bg-custom1'>
@@ -118,6 +123,18 @@ const BodyNav: React.FC<BodyNavProps> = () => {
                 title={result.program}
                 dates={result.dates}
                 description={result.description}
+              />
+            ))}
+          </div>
+        )}
+        {activeStatus === 3 && (
+          <div className='flex flex-col'>
+            {songsData.map((song) => (
+              <Songs
+                key={song.id.toString()}
+                id={song.id}
+                title={song.title}
+                fileURL={`http://localhost:8080/songs/stream/${song.id}`}
               />
             ))}
           </div>
