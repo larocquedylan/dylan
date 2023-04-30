@@ -12,7 +12,7 @@ router.use(express.json());
 
 router.get('/', getAllSongs);
 router.get('/:id', getSongById);
-router.get('/download/:songId', downloadSong);
+router.get('/download/:songTitle', downloadSong);
 router.get('/stream/:songTitle', streamSong);
 
 export default router;
