@@ -10,5 +10,5 @@ router.use(express_1.default.json());
 router.get('/', songController_1.getAllSongs);
 router.get('/:id', songController_1.getSongById);
 router.get('/download/:songId', songController_1.downloadSong);
-router.get('/stream/:songId', songController_1.streamSong);
+router.get('/stream/:songTitle', songController_1.streamSong);
 exports.default = router;
