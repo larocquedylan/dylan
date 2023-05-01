@@ -18,24 +18,28 @@ const NavBar: React.FC<NavBarProps> = () => {
           <a
             // email to larocque.d11@gmail.com
             href='mailto:larocque.d11@gmail.com'
+            target='_blank'
             className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
           >
             <HiOutlineMail />
           </a>
           <a
             href='https://github.com/larocquedylan'
+            target='_blank'
             className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
           >
             <IconGithubAlt />
           </a>
           <a
             href='https://www.linkedin.com/in/dylan-larocque-/'
+            target='_blank'
             className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
           >
             <IconLinkedinLine />
           </a>
           <a
             href='https://twitter.com/LaRocque_Dylan'
+            target='_blank'
             className='p-1 rounded-md border border-custom5 hover:border-custom4 transition-colors duration-300  hover:text-custom4 '
           >
             <IconTwitterAlt />
