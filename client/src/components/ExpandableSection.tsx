@@ -19,7 +19,7 @@ const ExpandableSection: React.FC<ExpandableSectionProps> = ({
 
   return (
     <div className='flex flex-col'>
-      <div className='flex items-center justify-between p-4 pr-0 bg-custom1'>
+      <div className='flex items-center justify-between p-4 pr-0 bg-custom1 mr-4 lg:mr-0'>
         <h2 className='text-custom5 text-sm'>{title}</h2>
         <button onClick={handleClick} className='focus:outline-none'>
           <svg
@@ -43,8 +43,8 @@ const ExpandableSection: React.FC<ExpandableSectionProps> = ({
       </div>
       {expanded && (
         <div
-          className='ml-4 p-4 bg-custom2 text-custom5 rounded transition duration-500 ease-in-out max-h-0 overflow-hidden'
-          style={{ maxHeight: expanded ? '100vh' : '0' }}
+          className='ml-4 p-4 bg-custom2 text-custom5 rounded transition duration-500 ease-in-out overflow-hidden mr-4 lg:mr-0'
+          style={{ maxHeight: expanded ? '100%' : '0' }}
         >
           <p className='mb-4 text-sm'> {dates}</p>
           {children}
