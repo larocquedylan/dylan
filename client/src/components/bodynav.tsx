@@ -52,7 +52,7 @@ const BodyNav: React.FC<BodyNavProps> = () => {
   useEffect(() => {
     fetchData('/education.json', setEducationData);
     fetchData('/acrobuzz.json', setAcrobuzzData);
-    fetchData('http://larocque-dylan.fly.dev/songs', setSongsData);
+    fetchData('https://larocque-dylan.fly.dev/songs', setSongsData);
   }, []);
 
   console.log('songdata', songsData);
@@ -138,7 +138,7 @@ const BodyNav: React.FC<BodyNavProps> = () => {
                 id={song.id}
                 title={song.title}
                 download={song.download}
-                fileURL={`http://larocque-dylan.fly.dev/songs/stream/${encodeURIComponent(
+                fileURL={`https://larocque-dylan.fly.dev/songs/stream/${encodeURIComponent(
                   song.title
                 )}`}
               />
