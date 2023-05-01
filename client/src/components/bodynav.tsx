@@ -11,6 +11,9 @@ interface DataItem {
   program: string;
   dates: string;
   description: string;
+  title: string;
+  fileURL: string;
+  download: string;
 }
 
 const BodyNav: React.FC<BodyNavProps> = () => {
