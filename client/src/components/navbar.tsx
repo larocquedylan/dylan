@@ -2,6 +2,7 @@ import React from 'react';
 import IconGithubAlt from '../assets/github';
 import IconLinkedinLine from '../assets/linkedin';
 import IconTwitterAlt from '../assets/twitter';
+import { HiOutlineMail } from 'react-icons/hi';
 
 interface NavBarProps {}
 
@@ -15,19 +16,26 @@ const NavBar: React.FC<NavBarProps> = () => {
         </a>
         <div className='flex space-x-2'>
           <a
-            href='https://github.com/'
+            // email to larocque.d11@gmail.com
+            href='mailto:larocque.d11@gmail.com'
+            className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
+          >
+            <HiOutlineMail />
+          </a>
+          <a
+            href='https://github.com/larocquedylan'
             className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
           >
             <IconGithubAlt />
           </a>
           <a
-            href='https://linkedin.com/'
+            href='https://www.linkedin.com/in/dylan-larocque-/'
             className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
           >
             <IconLinkedinLine />
           </a>
           <a
-            href='https://twitter.com/'
+            href='https://twitter.com/LaRocque_Dylan'
             className='p-1 rounded-md border border-custom5 hover:border-custom4 transition-colors duration-300  hover:text-custom4 '
           >
             <IconTwitterAlt />
