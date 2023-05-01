@@ -1,0 +1,13 @@
+# fly.toml app configuration file generated for larocque-dylan on 2023-04-30T20:25:59-07:00
+#
+# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
+#
+
+app = "larocque-dylan"
+primary_region = "sea"
+
+[http_service]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = true
+  auto_start_machines = true
