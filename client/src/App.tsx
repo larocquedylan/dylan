@@ -1,7 +1,7 @@
 import './App.css';
-import Bio from './components/bio';
-import BodyNav from './components/bodynav';
-import NavBar from './components/navbar';
+import Bio from './components/Bio';
+import BodyNav from './components/BodyNav';
+import NavBar from './components/NavBar';
 
 function App() {
   return (
