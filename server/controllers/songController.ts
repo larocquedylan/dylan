@@ -38,8 +38,6 @@ export const downloadSong = async (req: Request, res: Response) => {
   const lastElement = songList[songList.length - 1];
   console.log(lastElement);
 
-  // console.log(songList);
-
   const song = songList.find((song: Song) => song.title === songTitle);
   console.log(song);
 

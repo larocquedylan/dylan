@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import ExpandableSection from './ExpandableSection';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css'; // Import the required styles
@@ -11,18 +11,20 @@ interface SongsProps {
 }
 
 const Songs: React.FC<SongsProps> = ({ id, title, fileURL, download }) => {
-  const downloadURL = `http://localhost:8080/songs/download/${title}.wav`;
-
-  //   console.log(downloadURL);
-  //   console.log(id);
-
   return (
     <ExpandableSection title={title} dates={''}>
       <div className='flex items-center'>
-        <AudioPlayer src={fileURL} autoPlay={false} />
+        <AudioPlayer
+          src={fileURL}
+          autoPlay={false}
+          showJumpControls={false}
+          customVolumeControls={[]}
+          layout='horizontal-reverse'
+          className='text-sm bg-custom1 rounded-xl'
+        />
         <a
           href={download}
-          className='ml-4 px-3 py-1 text-sm bg-custom3 text-custom1 rounded hover:bg-custom2 transition-colors duration-300'
+          className='px-3 py-1 ml-4 text-sm transition-colors duration-300 rounded bg-custom5 text-custom1 hover:bg-custom2'
         >
           Download
         </a>
