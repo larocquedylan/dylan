@@ -1,4 +1,9 @@
-const convertUrlsToAnchors = (text: string, urlAliases: Object) => {
+// Define a new type for urlAliases
+interface UrlAliases {
+  [key: string]: string;
+}
+
+const convertUrlsToAnchors = (text: string, urlAliases: UrlAliases) => {
   const urlRegex =
     /(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/gi;
   return text.replace(urlRegex, (url) => {
