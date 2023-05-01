@@ -30,9 +30,9 @@ const BodyNav: React.FC<BodyNavProps> = () => {
   );
 
   const navItems: any = [
-    { label: 'Education', index: 1 },
+    { label: 'Learns', index: 1 },
     { label: 'AcroBuzz', index: 2 },
-    { label: 'BeatsforBeats', index: 3 },
+    { label: 'Beats4Bits', index: 3 },
     { label: 'Free game', index: 4 },
   ];
 
@@ -55,44 +55,11 @@ const BodyNav: React.FC<BodyNavProps> = () => {
     fetchData('https://larocque-dylan.fly.dev/songs', setSongsData);
   }, []);
 
-  console.log('songdata', songsData);
-
   return (
     <div className='mx-auto max-w-custom '>
-      <div className='relative mx-auto rounded sm:hidden sm:px-4'>
-        <div className='absolute inset-0 z-0 w-6 h-6 m-auto mr-4 '>
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            className='icon icon-tabler icon-tabler-selector'
-            width={24}
-            height={24}
-            viewBox='0 0 24 24'
-            strokeWidth='1.5'
-            stroke='#a6e1fa'
-            fill='none'
-            strokeLinecap='round'
-            strokeLinejoin='round'
-          >
-            <path stroke='none' d='M0 0h24v24H0z' />
-            <polyline points='8 9 12 5 16 9' />
-            <polyline points='16 15 12 19 8 15' />
-          </svg>
-        </div>
-        <select
-          aria-label='Selected tab'
-          className='relative z-10 block w-full p-4 bg-transparent rounded appearance-none form-select text-custom5 bg-custom1'
-        >
-          <option className='text-sm text-custom5'>Education </option>
-          <option className='text-sm text-custom5'>AcroBuzz </option>
-          <option selected className='text-sm text-custom5'>
-            Songs
-          </option>
-          {/* <option className='text-sm text-custom5'>xyz </option>
-          <option className='text-sm text-custom5'>abc </option> */}
-        </select>
-      </div>
-      <div className='flex-wrap justify-between hidden rounded shadow sm:block bg-custom1'>
-        <div className='h-12 xl:w-full xl:mx-0'>
+      <div className='flex-wrap justify-between rounded shadow sm:block bg-custom1'>
+        {/* <div className='h-12 xl:w-full xl:mx-0'> */}
+        <div className='h-12 w-full md:w-auto md:mx-0'>
           <ul className='flex px-4 xs:px-0'>
             {navItems.map((item: any) => (
               <BodyNavItem
