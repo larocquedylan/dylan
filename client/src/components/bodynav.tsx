@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import BodyNavItem from './BodyNavItem';
-import Education from './Education';
-import AcroBuzz from './AcroBuzz';
-import Songs from './Songs';
+import React, { useCallback, useEffect, useState } from 'react'
+import BodyNavItem from './BodyNavItem'
+import Education from './Education'
+import AcroBuzz from './AcroBuzz'
+import Songs from './Songs'
 
 interface BodyNavProps {}
 
@@ -17,43 +17,43 @@ interface DataItem {
 }
 
 const BodyNav: React.FC<BodyNavProps> = () => {
-  const [activeStatus, setActiveStatus] = useState(1);
-  const [educationData, setEducationData] = useState<DataItem[]>([]);
-  const [acrobuzzData, setAcrobuzzData] = useState<DataItem[]>([]);
-  const [songsData, setSongsData] = useState<DataItem[]>([]);
+  const [activeStatus, setActiveStatus] = useState(1)
+  const [educationData, setEducationData] = useState<DataItem[]>([])
+  const [acrobuzzData, setAcrobuzzData] = useState<DataItem[]>([])
+  const [songsData, setSongsData] = useState<DataItem[]>([])
 
   const handleItemClick = useCallback(
     (index: number) => {
-      setActiveStatus(index);
+      setActiveStatus(index)
     },
     [setActiveStatus]
-  );
+  )
 
   const navItems: any = [
     { label: 'Learns', index: 1 },
     { label: 'AcroBuzz', index: 2 },
     { label: 'Beats4Bits', index: 3 },
-    { label: 'Free game', index: 4 },
-  ];
+    { label: 'Free game', index: 4 }
+  ]
 
   const fetchData = async (
     url: string,
     setData: React.Dispatch<React.SetStateAction<DataItem[]>>
   ) => {
     try {
-      const response = await fetch(url);
-      const data = await response.json();
-      setData(data);
+      const response = await fetch(url)
+      const data = await response.json()
+      setData(data)
     } catch (error) {
-      console.error(`Error fetching data from ${url}:`, error);
+      console.error(`Error fetching data from ${url}:`, error)
     }
-  };
+  }
 
   useEffect(() => {
-    fetchData('/education.json', setEducationData);
-    fetchData('/acrobuzz.json', setAcrobuzzData);
-    fetchData('https://larocque-dylan.fly.dev/songs', setSongsData);
-  }, []);
+    fetchData('/education.json', setEducationData)
+    fetchData('/acrobuzz.json', setAcrobuzzData)
+    fetchData('https://larocque-dylan.fly.dev/songs', setSongsData)
+  }, [])
 
   return (
     <div className='mx-auto max-w-custom '>
@@ -114,7 +114,7 @@ const BodyNav: React.FC<BodyNavProps> = () => {
         )}
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default BodyNav;
+export default BodyNav
