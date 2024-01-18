@@ -1,16 +1,15 @@
 import React from 'react'
 import me from '../assets/me.jpg'
 // import example from '../articles/example.mdx'
-import * as everything from '../articles/example.mdx' // Assumes an integration is used to compile MDX -> JS.
+// import * as everything from '../articles/example.mdx' // Assumes an integration is used to compile MDX -> JS.
 
-interface BioProps {}
+// interface BioProps {}
 
 const Bio = (): React.ReactNode => {
-  console.log(everything) // {Thing: [Function: Thing], default: [Function: MDXContent]}
+  // console.log(everything) // {Thing: [Function: Thing], default: [Function: MDXContent]}
 
   return (
     <main className='flex flex-col md:flex-row max-w-custom mx-auto items-center py-6 px-4'>
-      {everything.default({})}
 
       <img
         className='rounded-2xl w-40 h-40 mb-4 md:mb-0'
