@@ -56,6 +56,12 @@ const Resume: React.FC = () => {
                 description='Built and deployed full stack web application using Vercel for front end hosting, a Digital Ocean VPS for backend infrastructure, Dokku for application management, and Postgres and Redis running in Docker containers.'
             />
             <ResumeCard
+                date='May 2023'
+                title='River City Leadership Forum'
+                techStack='Next.js, SSR '
+                description='Custom Next.Js marketing build for River City Leaders Forum in Edmonton. \n https://rclf.vercel.app/'
+            />
+            <ResumeCard
                 date='Mar 2023'
                 title='Beats for Bits'
                 techStack='React, Tailwind, Express, Docker, LnBits, MochaJS'
