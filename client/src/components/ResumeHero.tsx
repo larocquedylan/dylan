@@ -10,8 +10,9 @@ const ResumeHero: React.FC = () => {
             alt='Dylan LaRocque'
         />
         <div className='flex flex-col justify-center space-y-1'>
-            <h1 className="text-xl font-medium text-custom5">Dylan LaRocque</h1>
-            <h2 className="text-lg font-thin text-custom4">Software Enginner in Vancouver</h2>
+            <h1 className="text-sm sm:text-lg font-medium text-custom5">Dylan LaRocque</h1>
+            <h2 className="text-sm sm:text-md font-light sm:font-normal text-custom4">Software Engineer</h2>
+            <h2 className="text-sm sm:text-md font-light sm:font-normal text-custom4">Vancouver, BC</h2>
         </div>
   </div>
   )

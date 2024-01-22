@@ -4,20 +4,23 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      screens: {
+        xs: '360px' // custom xs breakpoint
+      },
       colors: {
         custom1: '#00072d',
         custom2: '#001e5e',
         custom3: '#0a2472',
         custom4: '#0e6ba8',
-        custom5: '#a6e1fa',
+        custom5: '#a6e1fa'
       },
       fontFamily: {
-        sans: ['Inter'],
+        sans: ['Inter']
       },
       maxWidth: {
-        custom: '900px', // Add this line
+        custom: '900px' // Add this line
       },
-      plugins: [],
-    },
-  },
-};
+      plugins: []
+    }
+  }
+}

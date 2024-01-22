@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import BodyNavItem from './BodyNavItem'
 import Education from './Education'
 import AcroBuzz from './AcroBuzz'
-import Songs from './Songs'
+import Songs from './songs'
 
 interface BodyNavProps {}
 
