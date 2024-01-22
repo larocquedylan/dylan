@@ -1,8 +1,8 @@
-import React from 'react';
-import IconGithubAlt from '../assets/github';
-import IconLinkedinLine from '../assets/linkedin';
-import IconTwitterAlt from '../assets/twitter';
-import { HiOutlineMail } from 'react-icons/hi';
+import React from 'react'
+import IconGithubAlt from '../assets/github'
+import IconLinkedinLine from '../assets/linkedin'
+import IconTwitterAlt from '../assets/twitter'
+import { HiOutlineMail } from 'react-icons/hi'
 
 interface NavBarProps {}
 
@@ -19,35 +19,35 @@ const NavBar: React.FC<NavBarProps> = () => {
             // email to larocque.d11@gmail.com
             href='mailto:larocque.d11@gmail.com'
             target='_blank'
-            className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
+            className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300' rel="noreferrer"
           >
             <HiOutlineMail />
           </a>
           <a
             href='https://github.com/larocquedylan'
             target='_blank'
-            className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
+            className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300' rel="noreferrer"
           >
             <IconGithubAlt />
           </a>
           <a
             href='https://www.linkedin.com/in/dylan-larocque-/'
             target='_blank'
-            className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300'
+            className='p-1 rounded-md border border-custom5  hover:text-custom4 hover:border-custom4 transition-colors duration-300' rel="noreferrer"
           >
             <IconLinkedinLine />
           </a>
           <a
             href='https://twitter.com/LaRocque_Dylan'
             target='_blank'
-            className='p-1 rounded-md border border-custom5 hover:border-custom4 transition-colors duration-300  hover:text-custom4 '
+            className='p-1 rounded-md border border-custom5 hover:border-custom4 transition-colors duration-300  hover:text-custom4 ' rel="noreferrer"
           >
             <IconTwitterAlt />
           </a>
         </div>
       </div>
     </nav>
-  );
-};
+  )
+}
 
-export default NavBar;
+export default NavBar
