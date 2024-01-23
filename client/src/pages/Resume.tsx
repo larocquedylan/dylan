@@ -26,13 +26,13 @@ const Resume: React.FC = () => {
             title="Software Engineering Intern | Microsoft"
             date="09 2023 - 12 2023"
             where="Vancouver, BC"
-            description="Feature development within the Windows Photos Premium team focused on the early stage prototype of the Photos CollabGallery, a major project to launch in 2024, demonstrating skills in scalable and user focused development.\nResearch into image format standards, understanding the nuances of how cameras process and store information. This knowledge was pivotal in optimizing data handling and transfer within the browser for maximum efficiency."
+            description="Feature development within the Windows Photos Premium team focused on the early stage prototype for a major project set to launch in 2024, demonstrating skills in scalable and user focused development.\nResearch into image format standards, understanding the nuances of how cameras process and store information. This knowledge was pivotal in optimizing data handling and transfer within the browser for maximum efficiency."
           />
           <ResumeCard
             title="Occupational First Aid Attendant | Impact Safety Solutions"
-            date="11 2021 - 05 2022"
+            date="11 2021 - 05 2023"
             where="Edmonton, AB"
-            description="Conducted safety meetings and provided onsite medical support on remote work sites. \nThis was a detour but incredibly interesting for me. My parents were in the process of selling their company and I wanted to see what it was all about before it was gone."
+            description="Conducted safety meetings and provided onsite medical support on remote work sites (provide CPR, patient assessments, critical airway interventions, circulator interventions, and small wound management). \nThis was a detour but incredibly interesting for me as I learned how to save a life."
           />
           <ResumeCard
             title="Marketing Analyst | OneFeather"
@@ -53,7 +53,7 @@ const Resume: React.FC = () => {
             description="Performed comprehensive market research, profiling customers, mapping user journeys, and conducting competitive analysis to identify opportunities. Lead the development of the business plan and go-to-market strategy incorporating financial projections, revenue model, and budget forecast based on literature review, market sizing, and pricing strategies."
           />
           <ResumeCard
-            title="Finance Analyst | Royal Bank of Canada"
+            title="Finance Analyst Intern | Royal Bank of Canada"
             date="05 2018 - 08 2018"
             where="Toronto, ON"
             description="Performed due diligence and support on the build out of RBC's Investor and Treasury Services cost allocation model.\nProvided ad-hoc analysis for multiple business advisors on the Performance Management Team."
@@ -62,7 +62,7 @@ const Resume: React.FC = () => {
             title="Teaching Assistant | UBC, Darren Dahl"
             date="04 2018"
             where="Vancouver, BC"
-            description="Provided administrative support and note-taking for Dr. Dahl's MBA course, Creativity (BA 562)."
+            description="Provided administrative support and cataloging of Dr. Dahl's MBA course, Creativity (BA 562)."
           />
           <ResumeCard
             title="Research Assistant | UBC, Darren Dahl"
@@ -120,26 +120,30 @@ const Resume: React.FC = () => {
             <ResumeCard
               date="01 2024"
               title="Joy of React"
+              link="https://www.joyofreact.com/"
               techStack="Remote"
-              description="An interactive learning platform focused on modern React practices, offering hands-on experience with React hooks, component architecture, and state management."
+              description="Modern React practices with hooks, component architecture, and state management. The course also goes into server side rendering with Next.js, layout animations with Framer Motion "
             />
             <ResumeCard
               date="03 2023"
               title="JavaScript Algorithms and Data Structures"
               techStack="Remote"
-              description="Fundamental computer science topics, including Big O notation, recursion, sorting algorithms, and data structures like linked lists, trees, and graphs."
+              link="https://www.udemy.com/course/js-algorithms-and-data-structures-masterclass"
+              description="Fundamental computer science topics, including Big O notation, recursion, searching/sorting algorithms, and data structures like linked lists, trees, and graphs."
             />
             <ResumeCard
               date="03 2023"
               title="EpicReact.Dev"
+              link="https://epicreact.dev/"
               techStack="Remote"
-              description="In-depth coverage of React fundamentals, hooks, testing, and performance optimization from the creator of React Testing Library, Kent C. Dodds."
+              description="In-depth coverage of React fundamentals, advanced hooks and component patterns, performance optimization, testing, and React Suspense from the creator of React Testing Library, Kent C. Dodds."
             />
             <ResumeCard
               date="11 2022 - 02 2023"
               title="BrainStation"
               where="Remote"
-              description="Software Engineering Bootcamp."
+              link="https://brainstation.io/online/software-engineering-bootcamp"
+              description="Software Engineering Bootcamp introducing HTML, CSS, JavaScript, React, Node, and MySQL"
             />
             <ResumeCard
               date="09 2016 - 05 2020"
