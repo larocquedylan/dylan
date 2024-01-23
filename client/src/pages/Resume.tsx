@@ -78,13 +78,15 @@ const Resume: React.FC = () => {
           <ResumeCard
             date="05 2023"
             title="River City Leadership Forum"
-            techStack="Next.js, SSR "
-            description="Custom Next.Js marketing build for River City Leaders Forum in Edmonton. \n https://rclf.vercel.app/"
+            techStack="Next.js, SSR"
+            link="https://rclf.vercel.app"
+            description="Custom Next.Js marketing build for River City Leaders Forum in Edmonton."
           />
           <ResumeCard
             date="04 2023"
             title="AcroBuzz"
             techStack="Next.js, Apollo, TypeGraphQL, Prisma, PostgreSQL, Redis, Docker, Jest"
+            link="https://acrobuzz.larocque.xyz/"
             description="Built and deployed full stack web application using Vercel for front end hosting, a Digital Ocean VPS for backend infrastructure, Dokku for application management, and Postgres and Redis running in Docker containers."
           />
           <ResumeCard
