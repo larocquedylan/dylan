@@ -32,13 +32,13 @@ const Resume: React.FC = () => {
             title="Occupational First Aid Attendant | Impact Safety Solutions"
             date="11 2021 - 05 2023"
             where="Edmonton, AB"
-            description="Conducted safety meetings and provided onsite medical support on remote work sites (provide CPR, patient assessments, critical airway interventions, circulator interventions, and small wound management). \nThis was a detour but incredibly interesting for me as I learned how to save a life."
+            description="Conducted safety meetings and provided onsite medical support on remote work sites (provide CPR, patient assessments, critical airway interventions, circulator interventions, and small wound management). \nThis was a detour but incredibly interesting. I learned how to save a life."
           />
           <ResumeCard
             title="Marketing Analyst | OneFeather"
             date="06 2021 - 09 2021"
             where="Remote"
-            description="Built dashboards and data visualizations"
+            description="Built out tag management and Google Analytics dashboard to monitor the companies marketing funnel before the roll out of a new banking solution.\n Interfaced with Indigenous First Nations conducting elections through the our services, communicating insights through exploratory statistics and strategized with Nations on ways to increase voter turnout."
           />
           <ResumeCard
             title="Service Designer | BC Public Service"
@@ -90,7 +90,7 @@ const Resume: React.FC = () => {
           <ResumeCard
             date="05 2023"
             title="River City Leadership Forum"
-            techStack="Next.js, SSR"
+            techStack="Typescript, Next.js, SSR"
             link="https://rclf.vercel.app"
             description="Custom Next.Js marketing build for River City Leaders Forum in Edmonton."
           />
@@ -99,19 +99,19 @@ const Resume: React.FC = () => {
             title="AcroBuzz"
             techStack="Next.js, Apollo, TypeGraphQL, Prisma, PostgreSQL, Redis, Docker, Jest"
             link="https://acrobuzz.larocque.xyz/"
-            description="Built and deployed full stack web application using Vercel for front end hosting, a Digital Ocean VPS for backend infrastructure, Dokku for application management, and Postgres and Redis running in Docker containers."
+            description="Built and deployed full stack web application using Vercel for front end hosting, a Digital Ocean VPS for backend infrastructure, Dokku for application management, and Postgres and Redis running in Docker containers. \nAcroBuzz implements user authentication through cookies in session storage, which in turn, authorizes users to create and edit posts, as well as upvote or downvote others' contributions."
           />
           <ResumeCard
             date="03 2023"
             title="Beats for Bits"
-            techStack="React, Tailwind, Express, Docker, LnBits, MochaJS"
+            techStack="TypeScript, React, Tailwind, Express, Docker, LnBits, MochaJS"
             description="Personal website to sell music with Bitcoin over the Lightning Network."
           />
           <ResumeCard
             date="02 2023"
             title="InStock"
             techStack="React, react-router-dom, Express, mysql, Knex, BEM/SASS."
-            description="Collaborated on a full-stack React application as a part of an Agile team, delivering an Inventory Management System with an Express back-end."
+            description="Collaborated on a full-stack React application as a part of an Agile team using Jira and Git for tickets and version control.\nWe delivered an Inventory Management System with a React front-end communicating with a Express back-end."
           />
         </div>
         <div className="mt-10">
@@ -122,7 +122,7 @@ const Resume: React.FC = () => {
               title="Joy of React"
               link="https://www.joyofreact.com/"
               techStack="Remote"
-              description="Modern React practices with hooks, component architecture, and state management. The course also goes into server side rendering with Next.js, layout animations with Framer Motion "
+              description="Modern React practices with hooks, component architecture, and state management. The course also goes into server side rendering with Next.js and layout animations with Framer Motion."
             />
             <ResumeCard
               date="03 2023"
@@ -143,7 +143,7 @@ const Resume: React.FC = () => {
               title="BrainStation"
               where="Remote"
               link="https://brainstation.io/online/software-engineering-bootcamp"
-              description="Software Engineering Bootcamp introducing HTML, CSS, JavaScript, React, Node, and MySQL"
+              description="Software Engineering Bootcamp introducing HTML, CSS, JavaScript, React, Node, and MySQL."
             />
             <ResumeCard
               date="09 2016 - 05 2020"
